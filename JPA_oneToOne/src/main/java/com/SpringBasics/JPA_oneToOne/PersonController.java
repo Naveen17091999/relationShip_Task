@@ -31,6 +31,7 @@ public class PersonController {
         if (person1.isPresent()) {
             person1.get().setName(person.getName());
             person1.get().setPassport(person.getPassport());
+            repository.save(person1.get());
         }
         return "Person updated.";
     }
